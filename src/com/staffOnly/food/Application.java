@@ -54,6 +54,24 @@ public class Application {
                     } else{
                         break;
                     }
+
+                case 2:
+                    // 1. 변수 설정
+                    System.out.println("목표 칼로리 : ");
+                    int goal = sc.nextInt();
+                    System.out.println("먹은 칼로리 : ");
+                    int eaten = sc.nextInt();
+
+                    //2. 객체 생성
+                    MinusCalculator minus = new MinusCalculator();
+
+                    //3. minus.judge(goal, eaten);으로 변수 넘김, string은 형태 이름은 result로 설정
+                    String result = minus.judge(goal, eaten);
+
+                    //8. 돌아온 문장을 출력
+
+                    System.out.println(result);
+
                 case 4:
                     System.out.print("음식의 값을 입력해주세요 : ");
                     int foodPrice = sc.nextInt();
