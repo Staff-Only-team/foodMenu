@@ -11,8 +11,8 @@ public class Application {
 
         do {
             System.out.println("===== [팀 이름] 식단 계산기 =====");
-            // (1) 각자 자기 메뉴 한 줄 추가
             System.out.println("0. 종료");
+            System.out.println("1. 하루동안 먹은 칼로리 합산");
             System.out.print("메뉴 선택 : ");
             menu = sc.nextInt();
 
