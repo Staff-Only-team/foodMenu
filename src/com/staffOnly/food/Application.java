@@ -12,18 +12,21 @@ public class Application {
         do {
             System.out.println("===== [StaffOnly 팀] 식단 계산기 =====");
             // (1) 각자 자기 메뉴 한 줄 추가
-<<<<<<< HEAD
-            System.out.println("1. 하루동안 먹은 칼로리 합산");
-=======
-            System.out.println("3. n인분 칼로리 표");
->>>>>>> 6a9bb31e9d40c87b3fae74402607d4bd38719e2c
-            System.out.println("4. 음식값과 인원 수를 입력받아 1인당 낼 금액");
             System.out.println("0. 종료");
+            System.out.println("1. 하루동안 먹은 칼로리 합산");
+            System.out.println("2. 목표 칼로리와 먹은 칼로리 차이 계산");
+            System.out.println("3. n인분 칼로리 표");
+            System.out.println("4. 음식값과 인원 수를 입력받아 1인당 낼 금액");
             System.out.print("메뉴 선택 : ");
             menu = sc.nextInt();
 
             switch (menu) {
                 // (2) 각자 자기 case 블록 추가
+                
+                case 0:
+                    System.out.println("계산기를 종료합니다.");
+                    break;
+                
                 case 1:
                     System.out.print("아침 칼로리: ");
                     int breakfast = sc.nextInt();
@@ -101,9 +104,7 @@ public class Application {
                         System.out.println("1인당 " + result_4 + "원");
                     }
                     break;
-                case 0:
-                    System.out.println("계산기를 종료합니다.");
-                    break;
+               
                 default:
                     System.out.println("없는 메뉴입니다. 다시 선택하세요.");
             }
