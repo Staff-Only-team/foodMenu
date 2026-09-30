@@ -12,13 +12,6 @@ public class Application {
         do {
             System.out.println("===== [StaffOnly 팀] 식단 계산기 =====");
             // (1) 각자 자기 메뉴 한 줄 추가
-<<<<<<< HEAD
-            System.out.println("1. 하루동안 먹은 칼로리 합산");
-=======
-            System.out.println("3. n인분 칼로리 표");
-            System.out.println("4. 음식값과 인원 수를 입력받아 1인당 낼 금액");
-=======
->>>>>>> c8f3ab519cbb15b39cb229b56923514e5a5982c7
             System.out.println("0. 종료");
             System.out.println("1. 하루동안 먹은 칼로리 합산");
             System.out.println("2. 목표 칼로리와 먹은 칼로리 차이 계산");
@@ -65,15 +58,16 @@ public class Application {
                         int snack = sc.nextInt();
                         int m2 = pc.sumSnack(breakfast, lunch, dinner, snack);
                         System.out.print("오늘 먹은 칼로리는 "+m2+"kcal 입니다.");
+                        break;
                     } else{
                         break;
                     }
 
                 case 2:
                     // 1. 변수 설정
-                    System.out.println("목표 칼로리 : ");
+                    System.out.print("목표 칼로리 : ");
                     int goal = sc.nextInt();
-                    System.out.println("먹은 칼로리 : ");
+                    System.out.print("먹은 칼로리 : ");
                     int eaten = sc.nextInt();
 
                     //2. 객체 생성
@@ -85,6 +79,7 @@ public class Application {
                     //8. 돌아온 문장을 출력
 
                     System.out.println(result);
+                    break;
 
                 case 3:
                     System.out.print("1인분 칼로리 : ");
