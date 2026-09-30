@@ -58,15 +58,16 @@ public class Application {
                         int snack = sc.nextInt();
                         int m2 = pc.sumSnack(breakfast, lunch, dinner, snack);
                         System.out.print("오늘 먹은 칼로리는 "+m2+"kcal 입니다.");
+                        break;
                     } else{
                         break;
                     }
 
                 case 2:
                     // 1. 변수 설정
-                    System.out.println("목표 칼로리 : ");
+                    System.out.print("목표 칼로리 : ");
                     int goal = sc.nextInt();
-                    System.out.println("먹은 칼로리 : ");
+                    System.out.print("먹은 칼로리 : ");
                     int eaten = sc.nextInt();
 
                     //2. 객체 생성
@@ -78,6 +79,7 @@ public class Application {
                     //8. 돌아온 문장을 출력
 
                     System.out.println(result);
+                    break;
 
                 case 3:
                     System.out.print("1인분 칼로리 : ");
