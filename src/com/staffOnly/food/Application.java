@@ -12,6 +12,7 @@ public class Application {
         do {
             System.out.println("===== [StaffOnly 팀] 식단 계산기 =====");
             // (1) 각자 자기 메뉴 한 줄 추가
+            System.out.println("3. n인분 칼로리 표");
             System.out.println("4. 음식값과 인원 수를 입력받아 1인당 낼 금액");
             System.out.println("0. 종료");
             System.out.print("메뉴 선택 : ");
@@ -19,6 +20,18 @@ public class Application {
 
             switch (menu) {
                 // (2) 각자 자기 case 블록 추가
+
+                case 3:
+                    System.out.print("1인분 칼로리 : ");
+                    int onepeopleKcal = sc.nextInt();
+
+                    System.out.print("몇 인분까지 : ");
+                    int oneServing = sc.nextInt();
+
+                    MultiplyCalculator m = new MultiplyCalculator();
+                    m.multi(onepeopleKcal, oneServing);
+                    m.print(onepeopleKcal,oneServing);
+                    break;
 
                 case 4:
                     System.out.print("음식의 값을 입력해주세요 : ");
