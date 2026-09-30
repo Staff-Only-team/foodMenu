@@ -19,7 +19,27 @@ public class Application {
             menu = sc.nextInt();
 
             switch (menu) {
-                // (2) 각자 자기 case 블록 추가
+                
+                 case 0:
+                    System.out.println("계산기를 종료합니다.");
+                    break;
+
+                 case 2:
+                    // 1. 변수 설정
+                    System.out.println("목표 칼로리 : ");
+                    int goal = sc.nextInt();
+                    System.out.println("먹은 칼로리 : ");
+                    int eaten = sc.nextInt();
+
+                    //2. 객체 생성
+                    MinusCalculator minus = new MinusCalculator();
+
+                    //3. minus.judge(goal, eaten);으로 변수 넘김, string은 형태 이름은 result로 설정
+                    String result = minus.judge(goal, eaten);
+
+                    //8. 돌아온 문장을 출력
+
+                        System.out.println(result);
 
                 case 4:
                     System.out.print("음식의 값을 입력해주세요 : ");
@@ -34,45 +54,7 @@ public class Application {
                         System.out.println("1인당 " + result_4 + "원");
                     }
                     break;
-                case 0:
-                    System.out.println("계산기를 종료합니다.");
-                    break;
-
-                case 1:
-                    System.out.print("아침 칼로리: ");
-                    int breakfast = sc.nextInt();
-                    System.out.print("점심 칼로리: ");
-                    int lunch = sc.nextInt();
-                    System.out.print("저녁 칼로리: ");
-                    int dinner = sc.nextInt();
-
-                    PlusCalculator pc = new PlusCalculator();
-                    // 식사만 더하는 경우
-                    int m1 = pc.sumMeal(breakfast, lunch, dinner);
-                    System.out.println("오늘 먹은 칼로리는 "+m1+"kcal 입니다.");
-
-                    // 간식도 더하는 경우
-
-                    // 간식을 입력할 것인 지를 물어보는 sout
-                    // 예 / 아니오
-                    // 예 를 누르면 Scanner 로 간식 입력 받기
-                    // 아니오를 누르면 break 를 활용해서 메인으로 넘어가기
-                    System.out.print("간식의 칼로리를 추가하시겠습니까?(예/아니오): ");
-                    sc.nextLine(); // 해당 코드에서 저장 되는 입력 값 : enter 를 담는용도
-                    // snackyn = 123번지
-                    String snackyn = sc.nextLine();
-//                    System.out.println("snackyn = " + snackyn);
-                    // snackyn == "예" // 123번지 == 예
-                    // 예 == 예 eq
-                    if (snackyn.equals("예")) {
-                        System.out.print("간식 칼로리: ");
-                        int snack = sc.nextInt();
-                        int m2 = pc.sumSnack(breakfast, lunch, dinner, snack);
-                        System.out.print("오늘 먹은 칼로리는 "+m2+"kcal 입니다.");
-                    } else{
-                        break;
-                    }
-
+              
                 default:
                     System.out.println("없는 메뉴입니다. 다시 선택하세요.");
             }
