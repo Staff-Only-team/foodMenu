@@ -2,7 +2,7 @@ package com.staffOnly.food;
 
 public class MinusCalculator {
 
-
+    //test
 
     //6. 넘겨받은 변수를 계산 후 return으로 다시 되돌아감
     public int minus (int goal, int eaten) {
