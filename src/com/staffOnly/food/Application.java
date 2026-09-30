@@ -33,7 +33,7 @@ public class Application {
                     PlusCalculator pc = new PlusCalculator();
                     // 식사만 더하는 경우
                     int m1 = pc.sumMeal(breakfast, lunch, dinner);
-                    System.out.print("오늘 먹은 칼로리는 "+m1+"kcal 입니다.");
+                    System.out.println("오늘 먹은 칼로리는 "+m1+"kcal 입니다.");
 
                     // 간식도 더하는 경우
 
@@ -41,15 +41,21 @@ public class Application {
                     // 예 / 아니오
                     // 예 를 누르면 Scanner 로 간식 입력 받기
                     // 아니오를 누르면 break 를 활용해서 메인으로 넘어가기
-                    System.out.print("간식의 칼로리를 추가하시겠습니까?(예/ 아니오): ");
+                    System.out.print("간식의 칼로리를 추가하시겠습니까?(예/아니오): ");
+                    sc.nextLine(); // 해당 코드에서 저장 되는 입력 값 : enter 를 담는용도
+                    // snackyn = 123번지
                     String snackyn = sc.nextLine();
-                    if (snackyn == "예") {
+//                    System.out.println("snackyn = " + snackyn);
+                    // snackyn == "예" // 123번지 == 예
+                    // 예 == 예 eq
+                    if (snackyn.equals("예")) {
                         System.out.print("간식 칼로리: ");
                         int snack = sc.nextInt();
                         int m2 = pc.sumSnack(breakfast, lunch, dinner, snack);
                         System.out.print("오늘 먹은 칼로리는 "+m2+"kcal 입니다.");
+                    } else{
+                        break;
                     }
-                    break;
 
                 default:
                     System.out.println("없는 메뉴입니다. 다시 선택하세요.");
